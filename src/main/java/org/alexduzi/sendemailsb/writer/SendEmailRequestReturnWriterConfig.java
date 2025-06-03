@@ -5,7 +5,6 @@ import com.sendgrid.Request;
 import com.sendgrid.Response;
 import com.sendgrid.SendGrid;
 import com.sendgrid.helpers.mail.Mail;
-import org.alexduzi.sendemailsb.domain.UserBookLoan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.batch.item.ItemWriter;
@@ -25,8 +24,7 @@ public class SendEmailRequestReturnWriterConfig {
 
     @Bean
     public ItemWriter<Mail> sendEmailRequestReturnWriter() {
-//        return items -> items.forEach((item) -> sendEmail(item));
-        return items -> items.forEach(System.out::println);
+        return items -> items.forEach(this::sendEmail);
     }
 
     private void sendEmail(Mail email) {
