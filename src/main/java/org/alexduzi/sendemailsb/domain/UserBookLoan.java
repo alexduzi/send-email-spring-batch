@@ -6,15 +6,15 @@ public class UserBookLoan {
 
     private User user;
     private Book book;
-    private Date date;
+    private Date loan_date;
 
     public UserBookLoan() {
     }
 
-    public UserBookLoan(User user, Book book, Date date) {
+    public UserBookLoan(User user, Book book, Date loan_date) {
         this.user = user;
         this.book = book;
-        this.date = date;
+        this.loan_date = loan_date;
     }
 
     public User getUser() {
@@ -33,16 +33,16 @@ public class UserBookLoan {
         this.book = book;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getLoan_date() {
+        return loan_date;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setLoan_date(Date loan_date) {
+        this.loan_date = loan_date;
     }
 
     @Override
     public String toString() {
-        return "UserBookLoan{" + "user=" + user + ", book=" + book + ", date=" + date + '}';
+        return "UserBookLoan{" + "user=" + user + ", book=" + book + ", date=" + loan_date + '}';
     }
 }

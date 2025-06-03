@@ -24,7 +24,7 @@ public class SendEmailRequestReturnWriterConfig {
     }
 
     @Bean
-    public ItemWriter<UserBookLoan> sendEmailRequestReturnWriter() {
+    public ItemWriter<Mail> sendEmailRequestReturnWriter() {
 //        return items -> items.forEach((item) -> sendEmail(item));
         return items -> items.forEach(System.out::println);
     }
